@@ -41,6 +41,6 @@ int main()
     Rational C=A.mul(B);
     cout<<C.M<<"/"<<C.N<<endl;
     A.mul(A).print();
-    multiply(A,A).print();
+    multiply(B,C).print();
     //C.print();
 }
