@@ -34,7 +34,8 @@ for (int i=0;i<n;i++)
 for (int j=0;j<N;j++){
 if ((Trench[i][j])==3*(i+j))
     cout <<Trench[i][j]<<" ";}
+ for (int i=0;i<n;i++)
+delete []Trench[i];
 delete []Trench;
 return 0;
 }
-
