@@ -5,19 +5,19 @@
 using namespace std;
 int main()
 {
-int n,a=0;
+int n,a=2;
 cin >> n;
 int*A=new int[n];
 for( int i=0; i<n; i++)
 cin >> A[i];
 for(int i=0;i<n;i++){
-    for(int k=1;k<=A[i];k++){
+    for(int k=2;k*k<=A[i];k++){
     if(A[i]%k==0)
     a++;
     }
 if (a==3)
 cout << A[i] << " ";
- a=0;
+ a=2;
  }
 delete []A;
  return 0;
