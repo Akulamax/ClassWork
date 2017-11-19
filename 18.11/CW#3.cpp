@@ -25,6 +25,7 @@ cout<<Trench[i][j]<<" ";}
 for(int i=0;i<n;i=i+n)
 cout<<endl;
 }
+ for (int i=0;i<n;i++)
 delete []Trench;
 return 0;
 }
