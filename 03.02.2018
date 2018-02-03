@@ -1,0 +1,58 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+struct N{
+int *div;
+int chislo;
+unsigned int QOD;//quntity of divisors
+N(int n){
+    chislo =n;
+div = new int[n+1];
+int i = 1, j = 0;
+while(i <= sqrt(n)){
+if(fmod(n, i) == 0) {
+div[j] = i;
+div[j+1] = n/i;
+j+=2;
+if(sqrt(n) == i) j--;
+}
+++i;
+}
+QOD = j;
+
+}
+unsigned int n;
+N &operator = (N&A){
+N temp(A);
+swap (A,*this);
+return *this;}
+void operator += (N A){
+    chislo += A.chislo;
+    n = chislo;
+div = new int[n+1];
+int i = 1, j = 0;
+while(i <= sqrt(n)){
+if(fmod(n, i) == 0) {
+div[j] = i;
+div[j+1] = n/i;
+j+=2;
+if(sqrt(n) == i) j--;
+}
+++i;
+}
+QOD = j;
+}
+
+};
+int main()
+{
+ int a,n, div = 2;
+ cin>>a;
+ N A(a);
+  cin >> n;
+  N B(n);
+B+=A;
+
+for (int i=0; i<B.QOD; ++i) cout<<B.div[i] << " ";
+    return 0;
+}
